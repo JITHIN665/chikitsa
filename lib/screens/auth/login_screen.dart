@@ -87,7 +87,9 @@ class LoginScreen extends StatelessWidget {
 
             CustomButton(
               text: "Continue with Google",
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/settings');
+              },
               isOutlined: true,
               icon: Icons.g_translate,
               color: Colors.black,
