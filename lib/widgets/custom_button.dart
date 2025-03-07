@@ -4,7 +4,7 @@ class CustomButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
   final bool isOutlined;
-  final IconData? icon;
+  final String? icon;
   final Color color;
 
   const CustomButton({
@@ -53,7 +53,11 @@ class CustomButton extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        if (icon != null) Icon(icon, color: isOutlined ? color : Colors.white),
+        if (icon != null)
+          CircleAvatar(
+            radius: 16,
+            backgroundImage: AssetImage(icon!),
+          ),
         if (icon != null) const SizedBox(width: 8),
         Text(
           text,

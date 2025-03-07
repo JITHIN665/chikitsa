@@ -1,3 +1,4 @@
+import 'package:chikitsa/providers/medicine_provider.dart';
 import 'package:chikitsa/screens/home/add_medicine_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -13,6 +14,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => AuthProvider()),
+        ChangeNotifierProvider(create: (_) => MedicineProvider()),
       ],
       child: const MyApp(),
     ),
@@ -29,12 +31,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  LoginScreen(),
+      home: const LoginScreen(),
       routes: {
-        '/home': (context) =>  HomeScreen(),
-        '/report': (context) =>  ReportScreen(),
-        '/addMedicine': (context) =>  AddMedicineScreen(),
-        '/settings': (context) =>  SettingsScreen(),
+        '/home': (context) => const HomeScreen(),
+        '/report': (context) => ReportScreen(),
+        '/addMedicine': (context) => AddMedicineScreen(),
+        '/settings': (context) => const SettingsScreen(),
       },
       debugShowCheckedModeBanner: false,
     );

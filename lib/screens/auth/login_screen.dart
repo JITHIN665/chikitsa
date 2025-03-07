@@ -91,7 +91,7 @@ class LoginScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/settings');
               },
               isOutlined: true,
-              icon: Icons.g_translate,
+              icon: "assets/images/google.png",
               color: Colors.black,
             ),
             const SizedBox(height: 30),
@@ -100,7 +100,9 @@ class LoginScreen extends StatelessWidget {
               children: [
                 Text("New to Adhicine?", style: GoogleFonts.poppins()),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/home');
+                  },
                   child: Text(
                     "Sign Up",
                     style: GoogleFonts.poppins(color: const Color.fromARGB(255, 125, 149, 218)),
