@@ -55,6 +55,15 @@ class HomeScreen extends StatelessWidget {
         selectedIndex: 0,
         onItemTapped: (index) => {},
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/addMedicine');
+        },
+        backgroundColor: Colors.black,
+        shape: const CircleBorder(),
+        child: const Icon(Icons.add, color: Colors.white),
+      ),
       body: Consumer<MedicineProvider>(builder: (context, provider, child) {
         Map<String, List<Medicine>> categorizedMedicines = provider.categorizedMedicines;
         bool isEmpty =
