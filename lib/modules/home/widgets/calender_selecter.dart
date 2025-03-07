@@ -1,9 +1,10 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class CalendarSelector extends StatefulWidget {
-  final Function(DateTime) onDateChanged; // Callback to return selected date
-
+  final Function(DateTime) onDateChanged; 
   const CalendarSelector({super.key, required this.onDateChanged});
 
   @override
@@ -11,14 +12,13 @@ class CalendarSelector extends StatefulWidget {
 }
 
 class _CalendarSelectorState extends State<CalendarSelector> {
-  DateTime selectedDate = DateTime.now(); // ✅ Default is current date
+  DateTime selectedDate = DateTime.now(); 
 
   void _changeDate(int days) {
     setState(() {
       selectedDate = selectedDate.add(Duration(days: days));
     });
 
-    // Return selected date to parent
     widget.onDateChanged(selectedDate);
   }
 

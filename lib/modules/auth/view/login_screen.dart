@@ -1,7 +1,7 @@
-import 'package:chikitsa/providers/auth_provider.dart';
-import 'package:chikitsa/widgets/custom_button.dart';
-import 'package:chikitsa/widgets/email_input.dart';
-import 'package:chikitsa/widgets/password_input.dart';
+import 'package:chikitsa/infrastructure/providers/auth_provider.dart';
+import 'package:chikitsa/theme/widgets/custom_button.dart';
+import 'package:chikitsa/modules/auth/widgets/email_input.dart';
+import 'package:chikitsa/modules/auth/widgets/password_input.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -88,7 +88,6 @@ class LoginScreen extends StatelessWidget {
             CustomButton(
               text: "Continue with Google",
               onPressed: () {
-                Navigator.pushNamed(context, '/settings');
               },
               isOutlined: true,
               icon: "assets/images/google.png",

@@ -71,7 +71,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget navBarItem(IconData icon, String label, int index) {
     bool isSelected = widget.selectedIndex == index;
     return GestureDetector(
-      onTap: () => widget.onItemTapped(index),
+      onTap: () => {
+        if (index == 0) {Navigator.pushReplacementNamed(context, '/home')} else if (index == 1) {Navigator.pushReplacementNamed(context, '/report')}
+      },
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

@@ -1,4 +1,4 @@
-import 'package:chikitsa/models/medicine.dart';
+import 'package:chikitsa/infrastructure/models/medicine.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

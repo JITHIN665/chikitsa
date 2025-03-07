@@ -1,13 +1,13 @@
-import 'package:chikitsa/providers/medicine_provider.dart';
-import 'package:chikitsa/screens/home/add_medicine_screen.dart';
+import 'package:chikitsa/infrastructure/providers/medicine_provider.dart';
+import 'package:chikitsa/modules/home/view/add_medicine_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'providers/auth_provider.dart';
-import 'screens/auth/login_screen.dart';
-import 'screens/home/home_screen.dart';
-import 'screens/report/report_screen.dart';
+import 'infrastructure/providers/auth_provider.dart';
+import 'modules/auth/view/login_screen.dart';
+import 'modules/home/view/home_screen.dart';
+import 'modules/report/view/report_screen.dart';
 // import 'screens/medicine/add_medicine_screen.dart';
-import 'screens/settings/settings_screen.dart';
+import 'modules/settings/view/settings_screen.dart';
 
 void main() {
   runApp(
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       home: const LoginScreen(),
       routes: {
         '/home': (context) => const HomeScreen(),
-        '/report': (context) => ReportScreen(),
+        '/report': (context) => const ReportScreen(),
         '/addMedicine': (context) => AddMedicineScreen(),
         '/settings': (context) => const SettingsScreen(),
       },

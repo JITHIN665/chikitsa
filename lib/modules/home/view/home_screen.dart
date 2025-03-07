@@ -1,8 +1,10 @@
-import 'package:chikitsa/models/medicine.dart';
-import 'package:chikitsa/providers/medicine_provider.dart';
-import 'package:chikitsa/widgets/bottom_nav_bar.dart';
-import 'package:chikitsa/widgets/calender_selecter.dart';
-import 'package:chikitsa/widgets/medicine_card.dart';
+import 'package:chikitsa/infrastructure/models/medicine.dart';
+import 'package:chikitsa/infrastructure/providers/medicine_provider.dart';
+import 'package:chikitsa/modules/home/widgets/empty_state_widget.dart';
+import 'package:chikitsa/modules/home/widgets/medicine_section_widget.dart';
+import 'package:chikitsa/theme/widgets/bottom_nav_bar.dart';
+import 'package:chikitsa/modules/home/widgets/calender_selecter.dart';
+import 'package:chikitsa/modules/home/widgets/medicine_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -22,21 +24,24 @@ class HomeScreen extends StatelessWidget {
               backgroundColor: Colors.white,
               elevation: 0,
               automaticallyImplyLeading: false,
-              title: const Row(
+              title: Row(
                 children: [
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text("Hi Harry!", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black)),
                       Text("5 Medicines Left", style: TextStyle(fontSize: 14, color: Colors.black)),
                     ],
                   ),
-                  Spacer(),
-                  Icon(Icons.medical_services, color: Color.fromARGB(255, 125, 149, 218)),
-                  SizedBox(width: 20),
-                  CircleAvatar(
-                    radius: 18,
-                    backgroundImage: AssetImage("assets/images/care_1.jpg"),
+                  const Spacer(),
+                  const Icon(Icons.medical_services, color: Color.fromARGB(255, 125, 149, 218)),
+                  const SizedBox(width: 20),
+                  InkWell(
+                    onTap: () => {Navigator.pushNamed(context, '/settings')},
+                    child: const CircleAvatar(
+                      radius: 18,
+                      backgroundImage: AssetImage("assets/images/care_1.jpg"),
+                    ),
                   ),
                 ],
               ),
@@ -60,7 +65,7 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             const SizedBox(height: 20),
-            isEmpty ? buildEmptyState() : buildMedicineSections(categorizedMedicines),
+            isEmpty ? const EmptyStateWidget() : MedicineSectionsWidget(categorizedMedicines: categorizedMedicines),
           ],
         );
       }),

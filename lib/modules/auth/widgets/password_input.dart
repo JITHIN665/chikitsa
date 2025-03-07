@@ -1,4 +1,4 @@
-import 'package:chikitsa/providers/auth_provider.dart';
+import 'package:chikitsa/infrastructure/providers/auth_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

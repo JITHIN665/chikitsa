@@ -1,4 +1,4 @@
-import 'package:chikitsa/widgets/custom_button.dart';
+import 'package:chikitsa/theme/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -112,9 +112,7 @@ class SettingsScreen extends StatelessWidget {
             const SizedBox(height: 30),
             CustomButton(
               text: "Log Out",
-              onPressed: () {
-                Navigator.pushNamed(context, '/settings');
-              },
+              onPressed: () {},
               isOutlined: true,
               color: Colors.black,
             ),
@@ -266,9 +264,8 @@ class FooterSection extends StatelessWidget {
       children: links
           .map((link) => InkWell(
                 onTap: () => print(link),
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 30),
-                  child: Text(link, style: const TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold)),
+                child: ListTile(
+                  title: Text(link, style: const TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold)),
                 ),
               ))
           .toList(),
