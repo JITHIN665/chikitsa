@@ -27,7 +27,11 @@ class AddMedicineScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
-        leading: const Icon(Icons.arrow_back_ios_sharp),
+        leading: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: const Icon(Icons.arrow_back_ios_sharp)),
         title: const Text("Add Medicines", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black)),
       ),
       body: Consumer<AddMedicineProvider>(

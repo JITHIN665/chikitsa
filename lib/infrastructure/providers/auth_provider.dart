@@ -39,7 +39,15 @@ class AuthProvider with ChangeNotifier {
   }
 
   String? _validatePassword(String password) {
+    if (password.isEmpty) return "Password cannot be empty";
     if (password.length < 6) return "Password must be at least 6 characters";
     return null;
+  }
+
+  bool validateForm() {
+    _emailError = _validateEmail(_email);
+    _passwordError = _validatePassword(_password);
+    notifyListeners();
+    return _emailError == null && _passwordError == null;
   }
 }
