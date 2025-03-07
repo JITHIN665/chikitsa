@@ -1,3 +1,3 @@
 # chikitsa
 
-<!-- Uploading "Screenshot_2025-03-08-19-21-06-24_0e8f55da446fff28e5baade70af56f49.jpg"... -->
+![Image](https://github.com/user-attachments/assets/37cecbe3-02ae-4559-9f61-571c8a53763b)
