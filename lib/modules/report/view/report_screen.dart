@@ -21,6 +21,8 @@ class ReportScreen extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
+        shadowColor: Colors.transparent,
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,

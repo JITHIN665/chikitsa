@@ -1,5 +1,6 @@
+import 'package:chikitsa/infrastructure/providers/add_medicine_provider.dart';
 import 'package:chikitsa/infrastructure/providers/medicine_provider.dart';
-import 'package:chikitsa/modules/home/view/add_medicine_screen.dart';
+import 'package:chikitsa/modules/add_medicine/views/add_medicine_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'infrastructure/providers/auth_provider.dart';
@@ -15,6 +16,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthProvider()),
         ChangeNotifierProvider(create: (_) => MedicineProvider()),
+        ChangeNotifierProvider(create: (_) => AddMedicineProvider()),
       ],
       child: const MyApp(),
     ),

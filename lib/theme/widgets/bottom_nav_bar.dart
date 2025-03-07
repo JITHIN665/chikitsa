@@ -57,7 +57,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
               ],
             ),
             child: FloatingActionButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/addMedicine');
+              },
               backgroundColor: Colors.black,
               shape: const CircleBorder(),
               child: const Icon(Icons.add, color: Colors.white),

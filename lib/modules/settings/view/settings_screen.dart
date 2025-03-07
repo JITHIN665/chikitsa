@@ -11,6 +11,8 @@ class SettingsScreen extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(140),
         child: AppBar(
+          surfaceTintColor: Colors.transparent,
+          shadowColor: Colors.transparent,
           automaticallyImplyLeading: false,
           backgroundColor: Colors.white,
           leading: IconButton(

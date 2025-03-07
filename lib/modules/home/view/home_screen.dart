@@ -21,6 +21,8 @@ class HomeScreen extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(top: 20),
             child: AppBar(
+              surfaceTintColor: Colors.transparent,
+              shadowColor: Colors.transparent,
               backgroundColor: Colors.white,
               elevation: 0,
               automaticallyImplyLeading: false,
